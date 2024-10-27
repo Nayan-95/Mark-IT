@@ -122,23 +122,25 @@
 }
 
 
-/* Map container with a glowing border */
+/* Map container with a popping effect */
 .map-container {
   margin-left: 4.5rem;
   width: 90%;
   height: 100vh;
-  border: solid 2px #ff4500; /* Border with a strong color */
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6), /* Outer glow effect */
-              0 0 40px rgba(255, 165, 0, 0.4), /* Intermediate glow layer */
-              0 0 60px rgba(255, 215, 0, 0.3); /* Soft outer layer for blending */
+  background-color: #222; /* Subtle background for the popping effect */
   border-radius: 12px; /* Rounded corners */
   overflow: hidden; /* Ensures map stays within rounded borders */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover */
+  position: relative;
+  transform: perspective(1000px) translateZ(20px); /* 3D transform for pop-out effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+              0 20px 30px rgba(0, 0, 0, 0.3); /* Strong shadow beneath */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
 }
 
 /* Hover effect for map container */
 .map-container:hover {
-  box-shadow: 0 0 30px rgba(255, 69, 0, 0.8),
-              0 0 50px rgba(255, 165, 0, 0.5),
-              0 0 70px rgba(255, 215, 0, 0.4); /* Stronger glow on hover */
+  transform: perspective(1000px) translateZ(30px); /* Pops out further on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+              0 25px 40px rgba(0, 0, 0, 0.4); /* Darker shadow for enhanced effect */
 }
+

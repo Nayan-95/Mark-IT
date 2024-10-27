@@ -1,48 +1,40 @@
-/* Header container */
 .header {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    padding: 15px;
+    background-color: #282c34;
   }
   
-  /* Typography and individual word styles */
   .header h1 {
-    font-size: 2.2em;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    margin: 0;
+    font-size: 2em;
+    text-align: center;
+    color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
-    transition: transform 0.3s ease;
   }
   
-  /* Floating effect for each word */
   .header h1 span {
-    padding: 0 5px;
     transition: transform 0.3s ease;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
   }
   
-  /* Individual word colors */
-  .word1 { color: #ff6347; } /* Tomato */
-  .word2 { color: #4682b4; } /* SteelBlue */
-  .word3 { color: #32cd32; } /* LimeGreen */
-  .word4 { color: #ff8c00; } /* DarkOrange */
-  .word5 { color: #6a5acd; } /* SlateBlue */
-  .word6 { color: #daa520; } /* GoldenRod */
-  .word7 { color: #ff1493; } /* DeepPink */
-  
-  /* First letter styling */
-  .header h1 span strong {
-    font-weight: bold;
-    font-size: 1.2em; /* Slightly larger for emphasis */
-    color: inherit; /* Matches each word's color */
-  }
-  
-  /* Hover effect to lift words slightly */
   .header h1 span:hover {
     transform: translateY(-5px);
-    text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
   }
+  
+  /* Responsive Font Adjustments */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5em;
+    }
+  }
+  
+  .word1 { color: #ff6347; }
+  .word2 { color: #4682b4; }
+  .word3 { color: #32cd32; }
+  .word4 { color: #ff8c00; }
+  .word5 { color: #6a5acd; }
+  .word6 { color: #daa520; }
+  .word7 { color: #ff1493; }
   
